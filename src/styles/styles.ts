@@ -35,6 +35,7 @@ export const defaultTheme = {
 interface TitleProps {
   weight: "bd" | "exbd";
   size: "18" | "20" | "32" | "48";
+  variant: "title" | "subtitle" | "label";
 }
 
 export const TitleContainer = styled.h1<TitleProps>`
@@ -43,13 +44,14 @@ export const TitleContainer = styled.h1<TitleProps>`
   font-weight: ${({ weight }) => (weight === "bd" ? "700" : "800")};
   font-size: ${({ size, theme }) => `${theme[size]}rem`};
   line-height: 130%;
+  color: ${({ variant, theme }) => theme[`base-${variant}`]};
 `;
 
 interface SubtitleProps {
   weight: "rg" | "bd";
   size: "10" | "12" | "14" | "16" | "18" | "20" | "24";
   height: "130" | "160";
-  
+  variant: "title" | "subtitle" | "label" | "text";
 }
 
 export const SubtitleContainer = styled.p<SubtitleProps>`
@@ -58,4 +60,5 @@ export const SubtitleContainer = styled.p<SubtitleProps>`
   font-weight: ${({ weight }) => (weight === "rg" ? "400" : "700")};
   font-size: ${({ size, theme }) => `${theme[size]}rem`};
   line-height: ${({ height }) => `${height}%`};
+  color: ${({ variant, theme }) => theme[`base-${variant}`]};
 `;

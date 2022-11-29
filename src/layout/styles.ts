@@ -4,7 +4,8 @@ export const Header = styled.header`
   width: 100%;
   max-width: 90rem;
   max-height: 6.5rem;
-  margin: 2rem 10rem; // Se der b.o modificar para padding ...
+  margin: 0 auto; // Se der b.o modificar para padding ...
+  padding: 2rem 0;
 
   display: flex;
   align-items: center;
