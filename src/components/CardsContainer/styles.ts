@@ -11,4 +11,5 @@ export const CardGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
   row-gap: 2.5rem;
+  padding-bottom: 10rem;
 `;

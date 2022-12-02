@@ -1,3 +1,4 @@
+import { coffees } from "../../data/coffees";
 import { TitleContainer } from "../../styles/styles";
 import { Cards } from "../Cards";
 import { Container, CardGrid } from "./styles";
@@ -10,11 +11,9 @@ export function CardsContainer() {
       </TitleContainer>
 
       <CardGrid>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
+        {coffees.map((coffee) => {
+          return <Cards key={coffee.id} coffee={coffee} />;
+        })}
       </CardGrid>
     </Container>
   );

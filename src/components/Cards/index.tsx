@@ -10,28 +10,44 @@ import {
   ButtonAmounts,
 } from "./styles";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { ReactNode } from "react";
 
-export function Cards() {
+export interface Coffee {
+  id: number;
+  image: string;
+  tag: string[];
+  title: string;
+  subtitle: string;
+  price: string;
+}
+
+interface Props {
+  coffee: Coffee;
+}
+
+export function Cards({ coffee }: Props) {
   return (
     <Container>
-      <img src="/public/expresso.png" alt="" />
+      <img src={`/public/${coffee.image}`} alt="" />
 
       <Tags>
-        <span>tradicional</span>
+        {coffee.tag.map((tag) => {
+          return <span>{tag}</span>;
+        })}
       </Tags>
 
       <TitleContainer size="20" variant="subtitle" weight="bd">
-        Café com Leite
+        {coffee.title}
       </TitleContainer>
 
       <SubtitleContainer height="130" size="14" variant="label" weight="rg">
-        Meio a meio de expresso tradicional com leite vaporizado
+        {coffee.subtitle}
       </SubtitleContainer>
 
       <ContainerPurchase>
         <Prices>
           <p>
-            R$ <span>9,90</span>
+            R$ <span>{coffee.price}</span>
           </p>
         </Prices>
         <ContainerPrices>
@@ -45,7 +61,7 @@ export function Cards() {
             </ButtonAmounts>
           </AmountPrice>
           <AddCart>
-            <ShoppingCart size={22} weight="fill" color="#fff"/>
+            <ShoppingCart size={22} weight="fill" color="#fff" />
           </AddCart>
         </ContainerPrices>
       </ContainerPurchase>
