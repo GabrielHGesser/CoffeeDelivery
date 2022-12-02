@@ -1,5 +1,15 @@
 import { SubtitleContainer, TitleContainer } from "../../styles/styles";
-import { Container, Tags, ContainerPurchase } from "./styles";
+import {
+  Container,
+  Tags,
+  ContainerPurchase,
+  Prices,
+  AmountPrice,
+  AddCart,
+  ContainerPrices,
+  ButtonAmounts,
+} from "./styles";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
 export function Cards() {
   return (
@@ -19,14 +29,25 @@ export function Cards() {
       </SubtitleContainer>
 
       <ContainerPurchase>
-        <div>
+        <Prices>
           <p>
             R$ <span>9,90</span>
           </p>
-        </div>
-        <div>
-          
-        </div>
+        </Prices>
+        <ContainerPrices>
+          <AmountPrice>
+            <ButtonAmounts>
+              <Minus size={20} color="#8047F8" weight="fill" />
+            </ButtonAmounts>
+            <span>1</span>
+            <ButtonAmounts>
+              <Plus size={20} color="#8047F8" weight="fill" />
+            </ButtonAmounts>
+          </AmountPrice>
+          <AddCart>
+            <ShoppingCart size={22} weight="fill" color="#fff"/>
+          </AddCart>
+        </ContainerPrices>
       </ContainerPurchase>
     </Container>
   );

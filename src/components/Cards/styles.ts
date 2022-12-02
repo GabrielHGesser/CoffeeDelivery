@@ -14,6 +14,9 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme["base-card"]};
 
+  img {
+    margin-top: -1rem;
+  }
 
   > h1 {
     margin-bottom: 0.5rem;
@@ -48,9 +51,87 @@ export const Tags = styled.div`
   }
 `;
 
-
 export const ContainerPurchase = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1.25rem;
+`;
+
+export const Prices = styled.div`
+  > p {
+    font-size: 0.875rem;
+    line-height: 130%;
+    text-align: right;
+    color: ${({ theme }) => theme["base-text"]};
+
+    span {
+      font-family: "Baloo 2";
+      font-weight: 800;
+      font-size: 1.5rem;
+      line-height: 130%;
+      text-align: right;
+      color: ${({ theme }) => theme["base-text"]};
+    }
+  }
+`;
+
+export const ContainerPrices = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   justify-content: space-between;
+`;
+
+export const AmountPrice = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8.5px 8px;
+
+  background: ${({ theme }) => theme["base-button"]};
+  border-radius: 6px;
+
+  > span {
+    width: 1.25rem;
+    height: 1.3125rem;
+    font-size: 1rem;
+    line-height: 130%;
+    text-align: center;
+    color: ${({ theme }) => theme["base-title"]};
+  }
+`;
+
+export const ButtonAmounts = styled.button`
+  width: 0.875rem;
+  height: 1.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      color: ${({ theme }) => theme["base-purple-dark"]};
+    }
+  }
+`;
+
+export const AddCart = styled.div`
+  width: 2.375rem;
+  height: 2.375rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: ${({ theme }) => theme["base-purple-dark"]};
+  border-radius: 6px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: ${({ theme }) => theme["base-purple"]};
+  }
 `;
