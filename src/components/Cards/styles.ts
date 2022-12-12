@@ -115,8 +115,10 @@ export const ButtonAmounts = styled.button`
   background: transparent;
   cursor: pointer;
 
-  &:hover {
-    svg {
+  svg {
+    color: ${({ theme }) => theme["base-purple"]};
+
+    &:hover {
       color: ${({ theme }) => theme["base-purple-dark"]};
     }
   }

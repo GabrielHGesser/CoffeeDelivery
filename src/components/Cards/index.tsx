@@ -53,11 +53,11 @@ export function Cards({ coffee }: Props) {
         <ContainerPrices>
           <AmountPrice>
             <ButtonAmounts>
-              <Minus size={20} color="#8047F8" weight="fill" />
+              <Minus size={20} weight="fill" />
             </ButtonAmounts>
             <span>1</span>
             <ButtonAmounts>
-              <Plus size={20} color="#8047F8" weight="fill" />
+              <Plus size={20} weight="fill" />
             </ButtonAmounts>
           </AmountPrice>
           <AddCart>
